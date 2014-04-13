@@ -1,0 +1,10 @@
+// https://github.com/rails/sprockets-rails/pull/126
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+
+@import "bootstrap";
+@import "compass/utilities";
+@import "compass/css3";
+@import "font-awesome";

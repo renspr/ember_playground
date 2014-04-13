@@ -1,0 +1,30 @@
+<form role="form">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Edit {{fullName}}</h3>
+    </div>
+
+    <div class="panel-body">
+      <div class="form-group" {{bind-attr class="errors.firstName.isEmpty::has-error"}}>
+        <label>First name</label>
+        {{input value=firstName class="form-control"}}
+        <span class="help-block">
+          {{errorsFor this 'firstName'}}
+        </span>
+      </div>
+
+      <div class="form-group" {{bind-attr class="errors.lastName.isEmpty::has-error"}}>
+        <label>Last name</label>
+        {{input value=lastName class="form-control"}}
+        <span class="help-block">
+          {{errorsFor this 'lastName'}}
+        </span>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button class="btn btn-primary" {{action "save" this}}>Save</button>
+      {{link-to "Cancel" "contacts" class="btn btn-default" active=false}}
+    </div>
+  </div>
+</form>

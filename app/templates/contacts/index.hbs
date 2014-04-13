@@ -1,0 +1,30 @@
+<section style="text-align: right; margin-bottom: 10px;">
+  {{#link-to 'contacts.new' class="btn btn-primary"}}
+    <span class="glyphicon glyphicon-plus"></span>
+    New Contact
+  {{/link-to}}
+</section>
+
+<table class="table">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th></th>
+  </tr>
+  {{#each contact in controller}}
+    <tr>
+      <td>{{contact.firstName}}</td>
+      <td>{{contact.lastName}}</td>
+      <td style="text-align: right">
+        {{#link-to 'contacts.edit' contact class="btn btn-xs btn-primary"}}
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+        {{/link-to}}
+        {{#link-to 'contacts.delete' contact class="btn btn-xs btn-danger"}}
+          <span class="glyphicon glyphicon-trash"></span>
+          Delete
+        {{/link-to}}
+      </td>
+    </tr>
+  {{/each}}
+</table>
